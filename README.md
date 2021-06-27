@@ -1,6 +1,9 @@
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 0.14 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.0 |
 
 ## Providers
 
@@ -25,7 +28,6 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_aws_profile"></a> [aws\_profile](#input\_aws\_profile) | Perfil das Credenciais na AWS | `string` | `"terraform"` | no |
 | <a name="input_az_count"></a> [az\_count](#input\_az\_count) | Numero de Zonas de disponibilidade | `number` | `4` | no |
 | <a name="input_azs"></a> [azs](#input\_azs) | Zonas de disponibilidade | `list(string)` | <pre>[<br>  "us-east-1a",<br>  "us-east-1b",<br>  "us-east-1c",<br>  "us-east-1d"<br>]</pre> | no |
 | <a name="input_cidr"></a> [cidr](#input\_cidr) | CIDR da VPC | `string` | `"10.40.0.0/16"` | no |
