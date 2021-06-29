@@ -111,7 +111,7 @@
  </details>
  
  <details>
-**variables.tf** - Contém variáveis de todos os módulos e pode ter os valores alterados de acordo com a necessidade.
+<summary>variables.tf - Contém variáveis de todos os módulos e pode ter os valores alterados de acordo com a necessidade.</summary>
 
 
     variable "region" {
@@ -292,9 +292,10 @@
     description = "dns name do load balance"
     }
 
+</details>
 
-
-**script.sh** - Script a ser executado no campo "user data" da instancia Ec2.
+<details>
+<summary>script.sh - Script a ser executado no campo "user data" da instancia Ec2.</summary>
 
 
     #!/bin/bash
