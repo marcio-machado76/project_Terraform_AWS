@@ -14,7 +14,7 @@
 ## 
 
 **Para consumir estes módulos, serão necessários alguns arquivos e configurações:**
-
+<details>
 **versions.tf** - Arquivo com as versões dos providers.
 
     terraform {
@@ -27,6 +27,7 @@
         }
     }
     }
+ </details>
 
 **main.tf** - Arquivo que irá consumir os módulos deverá seguir a seguinte estrutura:
     
