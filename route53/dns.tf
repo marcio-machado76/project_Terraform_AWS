@@ -19,10 +19,9 @@ resource "aws_route53_record" "sitewp" {
 
 resource "aws_route53_record" "banco" {
   zone_id = aws_route53_zone.wordpress.zone_id
-  name    = "banco.${var.dns}"
+  name    = "${var.db_name}.${var.dns}"
   type    = "CNAME"
   ttl     = "300"
   records = [var.dbrds]
 
 }
-
