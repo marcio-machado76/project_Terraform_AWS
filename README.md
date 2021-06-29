@@ -28,9 +28,10 @@
         }
     }
     }
- 
+</details> 
 
-<summary>**main.tf** - Arquivo que irá consumir os módulos deverá seguir a seguinte estrutura:</summary>
+<details>
+<summary>main.tf - Arquivo que irá consumir os módulos deverá seguir a seguinte estrutura:</summary>
     
 
     provider "aws" {
@@ -107,6 +108,9 @@
 
     }
 
+ </details>
+ 
+ <details>
 **variables.tf** - Contém variáveis de todos os módulos e pode ter os valores alterados de acordo com a necessidade.
 
 
