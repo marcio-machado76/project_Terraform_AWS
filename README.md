@@ -364,9 +364,9 @@ No resources.
 | <a name="input_azs"></a> [azs](#input\_azs) | Zonas de disponibilidade | `list(string)` | <pre>[<br>  "us-east-1a",<br>  "us-east-1b",<br>  "us-east-1c",<br>  "us-east-1d"<br>]</pre> | no |
 | <a name="input_cidr"></a> [cidr](#input\_cidr) | CIDR da VPC | `string` | `"10.40.0.0/16"` | no |
 | <a name="input_db_name"></a> [db\_name](#input\_db\_name) | Nome para o banco de dados no route53 | `string` | `"meu-banco"` | no |
-| <a name="input_db_passwd"></a> [db\_passwd](#input\_db\_passwd) | password db | `string` | `"terraformrds+wordpress"` | no |
-| <a name="input_dbadmin"></a> [dbadmin](#input\_dbadmin) | admin user db | `string` | `"admin"` | no |
-| <a name="input_dns"></a> [dns](#input\_dns) | Nome do domínio que sera adicionado a zona hospedada no route53 | `string` | `"cloud-naveia.ml"` | no |
+| <a name="input_db_passwd"></a> [db\_passwd](#input\_db\_passwd) | password db | `string` | `"senha-do-rds"` | no |
+| <a name="input_dbadmin"></a> [dbadmin](#input\_dbadmin) | admin user db | `string` | `"user-admin-do-RDS"` | no |
+| <a name="input_dns"></a> [dns](#input\_dns) | Nome do domínio que sera adicionado a zona hospedada no route53 | `string` | `"exemplo.com"` | no |
 | <a name="input_ec2_count"></a> [ec2\_count](#input\_ec2\_count) | Quantidade de instancias Ec2 | `number` | `2` | no |
 | <a name="input_key_pair"></a> [key\_pair](#input\_key\_pair) | Chave na AWS para se conectar via ssh | `string` | `"minha-key"` | no |
 | <a name="input_meu_site"></a> [meu\_site](#input\_meu\_site) | Nome do site sem o domínio | `string` | `"meu-site-wordpress"` | no |
