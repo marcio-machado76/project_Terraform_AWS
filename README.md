@@ -15,6 +15,7 @@
 
 **Para consumir estes módulos, serão necessários alguns arquivos e configurações, clique em saiba mais:**
 <details>
+   <summary>versions.tf - Arquivo com as versões dos providers</summary>
 **versions.tf** - Arquivo com as versões dos providers.
 
     terraform {
