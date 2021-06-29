@@ -13,8 +13,8 @@
     A infraestrutura deve ser criada na nuvem da AWS.
 ## 
 
-**Para consumir estes módulos, serão necessários alguns arquivos e configurações:**
-<versions.tf>
+**Para consumir estes módulos, serão necessários alguns arquivos e configurações, clique em saiba mais:**
+<details>
 **versions.tf** - Arquivo com as versões dos providers.
 
     terraform {
@@ -27,7 +27,7 @@
         }
     }
     }
- </versions.tf>
+ 
 
 **main.tf** - Arquivo que irá consumir os módulos deverá seguir a seguinte estrutura:
     
@@ -327,7 +327,7 @@
     clear
     cd /home/ubuntu/ && docker-compose up
 
-
+</details>
 
 ## Providers
 
