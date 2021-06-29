@@ -13,7 +13,7 @@
     A infraestrutura deve ser criada na nuvem da AWS.
 ## 
 
-**Para consumir estes módulos, serão necessários alguns arquivos e configurações, clique em saiba mais:**
+**Para consumir estes módulos, serão necessários alguns arquivos e configurações, clique nos arquivos logo abaixo para expandir:**
 <details>
    <summary>versions.tf - Arquivo com as versões dos providers</summary>
 
