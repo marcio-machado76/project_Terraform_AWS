@@ -15,7 +15,7 @@
 
 **Para consumir estes módulos, serão necessários alguns arquivos e configurações:**
 
-** versions.tf** - Arquivo com as versões dos providers.
+##** versions.tf** - Arquivo com as versões dos providers.
 
     terraform {
     required_version = "~> 0.14"
@@ -28,7 +28,7 @@
     }
     }
 
-** main.tf** - Arquivo que irá consumir os módulos deverá seguir a seguinte estrutura:
+###** main.tf** - Arquivo que irá consumir os módulos deverá seguir a seguinte estrutura:
     
 
     provider "aws" {
