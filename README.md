@@ -260,9 +260,11 @@
     description = "Nome para o banco de dados no route53"
     default     = "banco"
     }
+</details>
 
-
-**outputs.tf** - Outputs de recursos que serão utilizados em outros módulos.
+<details>   
+   
+<summary>outputs.tf - Outputs de recursos que serão utilizados em outros módulos.</summary>
 
     output "ec2-public_ip" {
     description = "Public IP Ec2"
