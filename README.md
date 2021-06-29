@@ -15,7 +15,7 @@
 
 **Para consumir estes módulos, serão necessários alguns arquivos e configurações:**
 
-##** versions.tf** - Arquivo com as versões dos providers.
+**versions.tf** - Arquivo com as versões dos providers.
 
     terraform {
     required_version = "~> 0.14"
@@ -28,7 +28,7 @@
     }
     }
 
-###** main.tf** - Arquivo que irá consumir os módulos deverá seguir a seguinte estrutura:
+**main.tf** - Arquivo que irá consumir os módulos deverá seguir a seguinte estrutura:
     
 
     provider "aws" {
@@ -104,7 +104,7 @@
 
     }
 
-** variables.tf** - Contém variáveis de todos os módulos e pode ter os valores alterados de acordo com a necessidade.
+**variables.tf** - Contém variáveis de todos os módulos e pode ter os valores alterados de acordo com a necessidade.
 
 
     variable "region" {
@@ -255,7 +255,7 @@
     }
 
 
-** outputs.tf** - Outputs de recursos que serão utilizados em outros módulos.
+**outputs.tf** - Outputs de recursos que serão utilizados em outros módulos.
 
     output "ec2-public_ip" {
     description = "Public IP Ec2"
@@ -287,7 +287,7 @@
 
 
 
-** script.sh** - Script a ser executado no campo "user data" da instancia Ec2.
+**script.sh** - Script a ser executado no campo "user data" da instancia Ec2.
 
 
     #!/bin/bash
