@@ -13,9 +13,9 @@
     A infraestrutura deve ser criada na nuvem da AWS.
 ## 
 
-**Para consumir estes módulos, serão necessários alguns arquivos e configurações, clique nos arquivos logo abaixo para expandir:**
+**Para consumir estes módulos, serão necessários alguns arquivos e configurações, clique nos arquivos abaixo e saiba mais:**
 <details>
-   <summary>versions.tf - Arquivo com as versões dos providers</summary>
+   <summary>versions.tf - Arquivo com as versões dos providers.</summary>
 
 
     terraform {
@@ -31,7 +31,7 @@
 </details> 
 
 <details>
-<summary>main.tf - Arquivo que irá consumir os módulos deverá seguir a seguinte estrutura:</summary>
+<summary>main.tf - Arquivo que irá consumir os módulos deverá seguir a seguinte estrutura.</summary>
     
 
     provider "aws" {
