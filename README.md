@@ -101,6 +101,7 @@
     dbrds        = module.db.dbrds
     dns          = var.dns
     meu_site     = var.meu_site
+    db_name      = var.db_name
 
     }
 
@@ -135,7 +136,7 @@
     variable "az_count" {
     type        = number
     description = "Numero de Zonas de disponibilidade"
-    default     = 4
+    default     = 2
     }
 
 
@@ -223,7 +224,7 @@
     variable "ec2_count" {
     type        = number
     description = "Quantidade de instancias Ec2"
-    default     = 4
+    default     = 2
     }
 
 
@@ -237,7 +238,7 @@
     variable "dns" {
     type        = string
     description = "Nome do domínio que sera adicionado a zona hospedada no route53"
-    default     = "cloud-naveia.ml"
+    default     = "meu-dominio"
     }
 
 
@@ -359,15 +360,15 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_az_count"></a> [az\_count](#input\_az\_count) | Numero de Zonas de disponibilidade | `number` | `4` | no |
+| <a name="input_az_count"></a> [az\_count](#input\_az\_count) | Numero de Zonas de disponibilidade | `number` | `2` | no |
 | <a name="input_azs"></a> [azs](#input\_azs) | Zonas de disponibilidade | `list(string)` | <pre>[<br>  "us-east-1a",<br>  "us-east-1b",<br>  "us-east-1c",<br>  "us-east-1d"<br>]</pre> | no |
 | <a name="input_cidr"></a> [cidr](#input\_cidr) | CIDR da VPC | `string` | `"10.40.0.0/16"` | no |
-| <a name="input_db_name"></a> [db\_name](#input\_db\_name) | Nome para o banco de dados no route53 | `string` | `"banco"` | no |
+| <a name="input_db_name"></a> [db\_name](#input\_db\_name) | Nome para o banco de dados no route53 | `string` | `"meu-banco"` | no |
 | <a name="input_db_passwd"></a> [db\_passwd](#input\_db\_passwd) | password db | `string` | `"terraformrds+wordpress"` | no |
 | <a name="input_dbadmin"></a> [dbadmin](#input\_dbadmin) | admin user db | `string` | `"admin"` | no |
 | <a name="input_dns"></a> [dns](#input\_dns) | Nome do domínio que sera adicionado a zona hospedada no route53 | `string` | `"cloud-naveia.ml"` | no |
-| <a name="input_ec2_count"></a> [ec2\_count](#input\_ec2\_count) | Quantidade de instancias Ec2 | `number` | `4` | no |
-| <a name="input_key_pair"></a> [key\_pair](#input\_key\_pair) | Chave na AWS para se conectar via ssh | `string` | `"curso-devops"` | no |
+| <a name="input_ec2_count"></a> [ec2\_count](#input\_ec2\_count) | Quantidade de instancias Ec2 | `number` | `2` | no |
+| <a name="input_key_pair"></a> [key\_pair](#input\_key\_pair) | Chave na AWS para se conectar via ssh | `string` | `"minha-key"` | no |
 | <a name="input_meu_site"></a> [meu\_site](#input\_meu\_site) | Nome do site sem o domínio | `string` | `"meu-site-wordpress"` | no |
 | <a name="input_nacl"></a> [nacl](#input\_nacl) | Regras de Network Acls AWS | `map(object({ protocol = string, action = string, cidr_blocks = string, from_port = number, to_port = number }))` | <pre>{<br>  "100": {<br>    "action": "allow",<br>    "cidr_blocks": "0.0.0.0/0",<br>    "from_port": 22,<br>    "protocol": "tcp",<br>    "to_port": 22<br>  },<br>  "105": {<br>    "action": "allow",<br>    "cidr_blocks": "0.0.0.0/0",<br>    "from_port": 80,<br>    "protocol": "tcp",<br>    "to_port": 80<br>  },<br>  "110": {<br>    "action": "allow",<br>    "cidr_blocks": "0.0.0.0/0",<br>    "from_port": 443,<br>    "protocol": "tcp",<br>    "to_port": 443<br>  },<br>  "150": {<br>    "action": "allow",<br>    "cidr_blocks": "0.0.0.0/0",<br>    "from_port": 1024,<br>    "protocol": "tcp",<br>    "to_port": 65535<br>  }<br>}</pre> | no |
 | <a name="input_region"></a> [region](#input\_region) | Região na AWS | `string` | `"us-east-1"` | no |
@@ -399,6 +400,7 @@ No resources.
   - É necessário editar alguns campos no arquivo **script.sh**, especificamente nas variáveis de ambiente **WORDPRESS_DB_HOST**, **WORDPRESS_DB_USER** e **WORDPRESS_DB_PASSWORD** para coincidir com os inputs utilizados na criação do RDS.
   - Também é necessário informar seu domínio na variável **dns**, o nome de host do seu site na variável **meu_site** e o nome do banco RDS na variável **db_name**.
   Certifique-se que possua as credenciais da AWS - **AWS_ACCESS_KEY_ID** e **AWS_SECRET_ACCESS_KEY**.
+  - Para poder acessar as instancias crie uma "key pair" e adicione o nome de sua chave à variável **key_pair**.
 
 ### Comandos
 Para consumir os módulos deste repositório é necessário ter o terraform instalado ou utilizar o container do terraform dentro da pasta do seu projeto da seguinte forma:
