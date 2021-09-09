@@ -266,6 +266,7 @@
 <details>   
    
 <summary>outputs.tf - Outputs de recursos que serão utilizados em outros módulos.</summary>
+
 ```hcl
     output "ec2-public_ip" {
     description = "Public IP Ec2"
@@ -293,8 +294,8 @@
     output "elb_endpoint" {
     value       = module.elb.elb_endpoint
     description = "dns name do load balance"
-    }
-```
+    }```
+   
 </details>
 
 <details>
