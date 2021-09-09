@@ -17,7 +17,7 @@
 <details>
    <summary>versions.tf - Arquivo com as versões dos providers.</summary>
 
-
+```hcl
     terraform {
     required_version = "~> 0.14"
 
@@ -28,6 +28,7 @@
         }
     }
     }
+```
 </details> 
 
 <details>
@@ -107,13 +108,13 @@
     db_name      = var.db_name
 
     }
-
+```
  </details>
-``` 
+ 
  <details>
 <summary>variables.tf - Contém variáveis de todos os módulos e pode ter os valores alterados de acordo com a necessidade.</summary>
 
-
+```hcl
     variable "region" {
     type        = string
     description = "Região na AWS"
@@ -259,13 +260,13 @@
     type        = string
     description = "Nome para o banco de dados no route53"
     default     = "banco"
-    }
+    }```
 </details>
 
 <details>   
    
 <summary>outputs.tf - Outputs de recursos que serão utilizados em outros módulos.</summary>
-
+```hcl
     output "ec2-public_ip" {
     description = "Public IP Ec2"
     value       = module.ec2-instance.ec2-public_ip
@@ -293,13 +294,13 @@
     value       = module.elb.elb_endpoint
     description = "dns name do load balance"
     }
-
+```
 </details>
 
 <details>
 <summary>script.sh - Script a ser executado no campo "user data" da instancia Ec2.</summary>
 
-
+```sh
     #!/bin/bash
 
     # Update system
@@ -334,7 +335,7 @@
     EOF
     clear
     cd /home/ubuntu/ && docker-compose up
-
+```
 </details>
 
 ## Providers
