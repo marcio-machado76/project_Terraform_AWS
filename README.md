@@ -260,11 +260,11 @@
     type        = string
     description = "Nome para o banco de dados no route53"
     default     = "banco"
-    }```
+    }
+```
 </details>
 
 <details>   
-   
 <summary>outputs.tf - Outputs de recursos que serão utilizados em outros módulos.</summary>
 
 ```hcl
@@ -294,8 +294,8 @@
     output "elb_endpoint" {
     value       = module.elb.elb_endpoint
     description = "dns name do load balance"
-    }```
-   
+    }
+```
 </details>
 
 <details>
