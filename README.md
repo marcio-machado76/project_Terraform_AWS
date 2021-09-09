@@ -33,7 +33,7 @@
 <details>
 <summary>main.tf - Arquivo que irá consumir os módulos deverá seguir a seguinte estrutura.</summary>
     
-
+```hcl
     provider "aws" {
     region  = var.region
 
@@ -109,7 +109,7 @@
     }
 
  </details>
- 
+``` 
  <details>
 <summary>variables.tf - Contém variáveis de todos os módulos e pode ter os valores alterados de acordo com a necessidade.</summary>
 
