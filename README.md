@@ -301,7 +301,7 @@
 <details>
 <summary>script.sh - Script a ser executado no campo "user data" da instancia Ec2.</summary>
 
-```sh
+```bash
     #!/bin/bash
 
     # Update system
